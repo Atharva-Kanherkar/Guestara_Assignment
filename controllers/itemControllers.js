@@ -4,8 +4,8 @@ const Category = require('../models/Category');
 
 // Create Item
 const createItem = async (req, res) => {
-    const { categoryId, subCategoryId } = req.params;
-    const { name, image, description, taxApplicable, tax, baseAmount, discount } = req.body;
+    
+    const { name, image, description, taxApplicable, tax, baseAmount, discount,categoryId, subCategoryId } = req.body;
 
     try {
         // Find the category
@@ -30,8 +30,8 @@ const createItem = async (req, res) => {
             baseAmount,
             discount,
             totalAmount: baseAmount - discount,
-            category: categoryId,
-            subCategory: subCategoryId
+            categoryId: categoryId,
+            subCategoryId: subCategoryId
         });
 
         const savedItem = await newItem.save();
@@ -132,7 +132,7 @@ const searchItemByName = async (req, res) => {
     const { name } = req.query;
 
     try {
-        const items = await Item.find({ name: new RegExp(name, 'i') }).populate('category subCategory');
+        const items = await Item.find({ name: new RegExp(name, 'i') }).populate('categoryId subCategoryId');
         if (!items.length) {
             return res.status(404).json({ message: 'No items found' });
         }

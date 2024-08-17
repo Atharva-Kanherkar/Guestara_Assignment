@@ -7,13 +7,13 @@ const subCategoryRouter = express.Router();
 subCategoryRouter.post('/:categoryId', subCategoryControllers.createSubCategory);
 
 // Route to get all sub-categories
-subCategoryRouter.get('/', subCategoryControllers.getAllSubCategories);
+subCategoryRouter.get('/getAllSubCategories', subCategoryControllers.getAllSubCategories);
 
 // Route to get a sub-category by ID
-subCategoryRouter.get('/:subCategoryId', subCategoryControllers.getSubCategoryById);
+subCategoryRouter.get('getCategory/:subCategoryId', subCategoryControllers.getSubCategoryById);
 
 // Route to get all sub-categories under a specific category
-subCategoryRouter.get('/category/:categoryId', subCategoryControllers.getSubCategoriesByCategory);
+subCategoryRouter.get('/getByCategory/:categoryId', subCategoryControllers.getSubCategoriesByCategory);
 
 // Route to update an existing sub-category by ID
 subCategoryRouter.put('/:subCategoryId', subCategoryControllers.editSubCategory);

@@ -9,7 +9,7 @@ const itemSchema = new mongoose.Schema({
   baseAmount: { type: Number, required: true },
   discount: { type: Number, default: 0 },
   totalAmount: { type: Number, required: true },
-  categoryId: { type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true },
+  categoryId: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' , required: true },
   subCategoryId: { type: mongoose.Schema.Types.ObjectId, ref: 'SubCategory' },
 });
 
