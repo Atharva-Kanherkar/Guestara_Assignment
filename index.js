@@ -1,5 +1,6 @@
 const express = require('express');
-const connectToDatabase = require('./config/db');
+const connectDB = require('./config/db'); // Ensure this path is correct
+
 const categoryRoutes = require('./routes/categoryRoutes');
 const subCategoryRoutes = require('./routes/subCategoryRoutes');
 const itemRoutes = require('./routes/itemRoutes');
@@ -11,7 +12,7 @@ app.use(express.json());
 // Connect to the database and then start the server
 async function startServer() {
     try {
-        await connectToDatabase();  // Connect to the MongoDB database
+        await connectDB(); // Connect to the MongoDB database
         console.log("Successfully connected to the database");
 
         // Define your routes after successful connection
@@ -29,4 +30,3 @@ async function startServer() {
 
 // Start the server
 startServer();
-// In this example, we first import the connectToDatabase function from the config/db.js file. This function connects to the MongoDB database using the MongoClient API and returns the client object.
