@@ -1,18 +1,30 @@
-const mongoose = require('mongoose');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log('MongoDB connected!');
-  } catch (error) {
-    console.error('MongoDB error:', error);
-    process.exit(1);
+// Replace <password> with your MongoDB Atlas password
+const uri = "mongodb+srv://atharvakanherkar25:atharvakanherkar25@cluster0.d5llj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
   }
-};
+});
 
-module.exports = connectDB;
-//This function connects mongo db to the server. It uses the MONGO_URI from the .env file to connect to the database.
-//The function is exported so it can be used in the server.js file.
+async function connectToDatabase() {
+  try {
+    // Connect the client to the server
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    return client;
+  } catch (error) {
+    console.error("Failed to connect to MongoDB:", error);
+    throw error; // Re-throw the error to handle it in the calling code
+  }
+}
+
+// Export the connectToDatabase function
+module.exports = connectToDatabase;
