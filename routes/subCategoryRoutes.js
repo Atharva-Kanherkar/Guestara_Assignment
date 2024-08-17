@@ -18,7 +18,6 @@ subCategoryRouter.get('/category/:categoryId', subCategoryControllers.getSubCate
 // Route to update an existing sub-category by ID
 subCategoryRouter.put('/:subCategoryId', subCategoryControllers.editSubCategory);
 
-// Route to delete a sub-category by ID (if needed)
-subCategoryRouter.delete('/:subCategoryId', subCategoryControllers.deleteSubCategory);
+ 
 
 module.exports = subCategoryRouter;
