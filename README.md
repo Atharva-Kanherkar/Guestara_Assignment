@@ -21,8 +21,7 @@ This project is a Node.js backend server designed for menu management. The menu 
   - [Search Endpoint](#search-endpoint)
 - [Running the Project Locally](#running-the-project-locally)
 - [Short Answer Questions](#short-answer-questions)
-- [Contributing](#contributing)
-- [License](#license)
+ 
 
 ## Project Setup
 
