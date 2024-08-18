@@ -44,7 +44,7 @@ const createItem = async (req, res) => {
 // Get All Items
 const getAllItems = async (req, res) => {
     try {
-        const items = await Item.find().populate('category subCategory');
+        const items = await Item.find().populate('categoryId subCategoryId');
         res.status(200).json(items);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -56,7 +56,7 @@ const getItemById = async (req, res) => {
     const { itemId } = req.params;
 
     try {
-        const item = await Item.findById(itemId).populate('category subCategory');
+        const item = await Item.findById(itemId).populate('categoryId subCategoryId');
         if (!item) {
             return res.status(404).json({ message: 'Item not found' });
         }
@@ -71,7 +71,7 @@ const getItemsByCategory = async (req, res) => {
     const { categoryId } = req.params;
 
     try {
-        const items = await Item.find({ category: categoryId }).populate('category subCategory');
+        const items = await Item.find({ category: categoryId }).populate('categoryId subCategoryId');
         if (!items.length) {
             return res.status(404).json({ message: 'No items found for this category' });
         }
@@ -86,7 +86,7 @@ const getItemsBySubCategory = async (req, res) => {
     const { subCategoryId } = req.params;
 
     try {
-        const items = await Item.find({ subCategory: subCategoryId }).populate('category subCategory');
+        const items = await Item.find({ subCategory: subCategoryId }).populate('categoryId subCategoryId');
         if (!items.length) {
             return res.status(404).json({ message: 'No items found for this sub-category' });
         }
@@ -102,7 +102,7 @@ const editItem = async (req, res) => {
     const updateData = req.body;
 
     try {
-        const updatedItem = await Item.findByIdAndUpdate(itemId, updateData, { new: true }).populate('category subCategory');
+        const updatedItem = await Item.findByIdAndUpdate(itemId, updateData, { new: true }).populate('categoryId subCategoryId');
         if (!updatedItem) {
             return res.status(404).json({ message: 'Item not found' });
         }
