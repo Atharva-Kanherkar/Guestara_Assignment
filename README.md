@@ -186,3 +186,8 @@ The project has been deployed and can be accessed at:
    - Experimented with other databases for scalability.
    - Written the entire codebase in TypeScript for enhanced security and production readiness.
    - Added more in-depth documentation and comments.
+
+
+
+**System Design of the same**
+![Design](image.png)

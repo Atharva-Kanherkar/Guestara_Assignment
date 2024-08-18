@@ -1,16 +1,21 @@
-{
-    "name": "Starters",
-    "image": "https://example.com/images/starters.jpg",
-    "description": "Appetizing dishes to start your meal.",
-    "taxApplicability": true,
-    "tax": 5,
-    "taxType": "GST"
-},
-{
-    "name": "Main Course",
-    "image": "https://example.com/images/main_course.jpg",
-    "description": "Hearty main dishes to satisfy your hunger.",
-    "taxApplicability": true,
-    "tax": 12,
-    "taxType": "GST"
-}
+
+
+
+[
+    {
+        "name": "Starters",
+        "image": "https://example.com/images/starters.jpg",
+        "description": "Appetizing dishes to start your meal.",
+        "taxApplicability": true,
+        "tax": 5,
+        "taxType": "GST"
+    },
+    {
+        "name": "Main Course",
+        "image": "https://example.com/images/main_course.jpg",
+        "description": "Hearty main dishes to satisfy your hunger.",
+        "taxApplicability": true,
+        "tax": 12,
+        "taxType": "GST"
+    }
+]
