@@ -1,0 +1,17 @@
+[{
+    "name": "Soups",
+    "image": "https://example.com/images/soups.jpg",
+    "description": "Warm and comforting soups.",
+    "taxApplicability": true,
+    "tax": 5,
+    "category": "Starters"
+},
+{
+    "name": "Indian Cuisine",
+    "image": "https://example.com/images/indian_cuisine.jpg",
+    "description": "Traditional Indian dishes.",
+    "taxApplicability": true,
+    "tax": 12,
+    "category": "Main Course"
+}
+]

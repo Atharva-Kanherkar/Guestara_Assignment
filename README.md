@@ -159,6 +159,7 @@ The project is set up using Node.js and Express.js. It uses MongoDB as the datab
     ```
 
 6. **Test the API using Postman or any other API testing tool.**
+    - There is a sample data JSON file for testing. Please use that, and use the live link or post man for making GET/PUT/POST requests. 
 
 ## Deployment
 
@@ -174,6 +175,7 @@ The project has been deployed and can be accessed at:
    - Efficient structuring of RESTful APIs.
    - Time management: I learned how to handle pressure, balancing college exams and this assignment simultaneously.
    - Importance of well-documented and readable code, making it easier for collaboration.
+   - This one's an extra, but deploying to production was my first time doing it!
 
 3. **What was the most difficult part of the assignment?**  
    - The most challenging aspect was creating a database schema that accurately reflects the relationships between categories, sub-categories, and items, while maintaining efficient CRUD operations.

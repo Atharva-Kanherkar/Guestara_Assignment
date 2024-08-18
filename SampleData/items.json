@@ -1,0 +1,23 @@
+[{
+    "name": "Tomato Soup",
+    "image": "https://example.com/images/tomato_soup.jpg",
+    "description": "Rich and tangy tomato soup.",
+    "taxApplicability": true,
+    "tax": 5,
+    "baseAmount": 150,
+    "discount": 10,
+    "totalAmount": 140,
+    "subCategory": "Soups"
+},
+{
+    "name": "Butter Chicken",
+    "image": "https://example.com/images/butter_chicken.jpg",
+    "description": "Creamy and flavorful butter chicken.",
+    "taxApplicability": true,
+    "tax": 12,
+    "baseAmount": 350,
+    "discount": 20,
+    "totalAmount": 330,
+    "subCategory": "Indian Cuisine"
+}
+]
