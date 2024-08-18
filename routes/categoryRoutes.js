@@ -7,7 +7,7 @@ const categoryRouter = express.Router();
 categoryRouter.get('/getAllCategories', categoryControllers.getAllCategories);
 
 // Route to get a category by ID or name
-categoryRouter.get('getCategory/:idOrName', categoryControllers.getCategoryByIdOrName);
+categoryRouter.get('/getCategory/:idOrName', categoryControllers.getCategoryByIdOrName);
 
 // Route to create a new category
 categoryRouter.post('/create', categoryControllers.createCategory);
