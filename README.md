@@ -175,8 +175,6 @@ The project is set up using Node.js and Express.js. It uses MongoDB as the datab
 
 2. **3 things that you learned from this assignment?**
    - Efficient structuring of RESTful APIs.
-   - Importance of thorough testing using tools like Postman.
-   - The significance of error handling and validation in backend development.
    - Learnt how to do things in pressure, as there were college exams and classes too, but i managed! Time management is one thing i have learnt from this assignment which i will always carry forward with me. 
    - Importance of well documented code, in line comments and readable code so that people can collaborate with each other's written code!
 
