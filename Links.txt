@@ -1,0 +1,6 @@
+GET https://guestara-assignment-s1ka.onrender.com/api/categories/getAllCategories
+GET https://guestara-assignment-s1ka.onrender.com/api/categories/getCategory/:idOrName
+GET https://guestara-assignment-s1ka.onrender.com/api/subcategories/getAllSubCategories
+GET https://guestara-assignment-s1ka.onrender.com/api/subcategories/getByCategory/:categoryId
+GET https://guestara-assignment-s1ka.onrender.com/api/items/get
+GET https://guestara-assignment-s1ka.onrender.com/api/items/get/:itemId
