@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config(); // Load environment variables from the .env file
 const connectDB = require('./config/db'); // Ensure this path is correct
 
 const categoryRoutes = require('./routes/categoryRoutes');
