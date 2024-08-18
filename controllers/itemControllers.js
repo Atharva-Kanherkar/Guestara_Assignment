@@ -10,7 +10,7 @@ const createItem = async (req, res) => {
     try {
         // Find the category
         const category = categoryId ? await Category.findById(categoryId) : null;
-        if (categoryId && !category) {
+        if (!category) {
             return res.status(404).json({ message: 'Category not found' });
         }
 
